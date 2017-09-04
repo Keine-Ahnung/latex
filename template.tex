@@ -1,0 +1,97 @@
+\documentclass[a4paper, 12pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{enumitem}
+	\setlist[itemize]{leftmargin=1.75cm}
+	%\setlist[itemize]{itemsep=0.25em}
+  
+%Zeilenabstand korrekt setzen 1,5
+\usepackage{setspace}
+\makeatletter
+\newcommand{\MSonehalfspacing}{%
+  \setstretch{1.44}%  default
+  \ifcase \@ptsize \relax % 10pt
+    \setstretch {1.448}%
+  \or % 11pt
+    \setstretch {1.399}%
+  \or % 12pt
+    \setstretch {1.433}%
+  \fi
+}
+\makeatother
+\MSonehalfspacing
+
+\newcommand{\company}{Test Firma}
+\newcommand{\nameOfCreator}{Test}
+
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%header
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlength{\topmargin}{-15mm}
+
+\title{Praxisbericht}
+\author{Marian Schneider}
+\date{23.08.2017}
+
+\begin{document}
+%Startseite ohne Seitenzahl
+\pagestyle{empty}
+	
+%Titelblatt
+\begin{titlepage}
+	\begin{center} \large 
+		    
+		ART
+		\vspace*{2cm}
+		
+		{\huge TITLE}
+		\vspace*{2.5cm}
+		
+		\nameOfCreator
+		\vspace*{1.5cm}
+		
+		Datum der Abgabe
+		\vspace*{4.5cm}
+		
+		
+		Betreuung: Name der Betreuerin / des Betreuers \\[1cm]
+		Fakultät für Informatik \\[1cm]
+		Hochschule Albstadt Sigmaringen
+		  		
+	\end{center}
+\end{titlepage}
+	
+%%Erklärung, dass alles selbst gemacht worden ist
+	
+\section{Erklärung}
+Hiermit erkläre ich, dass dieser Bericht auf meinen eigenen Leistungen beruht. Insbesondere erkläre ich, dass 
+\begin{itemize}
+	\item[a)] ich diesen Praktikumsbericht selbstständig ohne unzulässige fremde Hilfe 					  erstellt habe,
+	\item[b)] die Verwendung aller Quellen klar und korrekt angegebenen habe und aus 					  anderen Quellen entnommene Zitate eindeutig als solche gekennzeichnet 					  habe,
+	\item[c)] ich aus anderen Quellen entnommene Gedanken, Ideen, Bilder, Zeichnungen 					  und Algorithmen entsprechend der wissenschaftlichen Praxis 								  gekennzeichnet habe,
+	\item[d)] ich außer den angegebenen Quellen und Hilfsmitteln keine weiteren 						  Quellen und Hilfsmittel zur Erstellung dieses Berichts verwendet habe.
+\end{itemize}
+\vspace*{1.5cm}
+\begin{center}
+	\begin{tabular}{lp{2em}l}
+		\hspace{3cm} &   & \hspace{3cm} \\\cline{1-1}\cline{3-3}
+		Ort, Datum   &   & Unterschrift 
+	\end{tabular}
+\end{center}
