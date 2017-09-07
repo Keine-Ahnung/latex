@@ -1,0 +1,253 @@
+\documentclass[a4paper, 11pt]{article}
+
+%
+% PACKAGES
+%
+
+\usepackage[ngerman]{babel} % Rechtschreibprüfung
+\usepackage[utf8]{inputenc} % Enkodierung von Umlauten
+\usepackage{fancyhdr} % Konfiguration des Headers und Footers
+\usepackage{graphicx} % Einbindung von Grafiken
+\usepackage{listings} % Codelistings
+\usepackage{pdfpages} % Einbingung externer PDF Dokumente
+\usepackage{geometry} % Konfiguration der Seitenränder
+\usepackage[hidelinks]{hyperref} % Entfernung der Hyperlinkmarkierung durch rote Ränder
+\usepackage{hyperref} % Einbindung von Hyperlinks
+\usepackage{setspace} % Konfiguration des Zeilenabstands
+\usepackage{verbatim} % Für Blockkommentare
+
+\usepackage{blindtext}
+
+%
+% SETUP
+%
+
+% Package: listings
+% Konfiguration des Codelistings
+% Default: Java als Programmiersprache, graue Schrift auf gelbem Hintergrund
+
+\lstset{columns=fullflexible,
+        mathescape=true,
+        literate=
+               {-=-}{$\rightarrow{}$}{1}
+               {-==-}{$\tab{}$}{1},
+        morekeywords={if,then,else,return}
+        }
+        
+\lstset{language=Java,
+  showspaces=false,
+  showtabs=false,
+  numbers=left,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  backgroundcolor=\color{isabelline},
+  captionpos=b,
+  frame=tlrb
+  frameround=rrrr,
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+}
+
+% Package: geometry
+% Anpassung der Seitenränder an vorgegebene Richtlinien
+% Default: Kopf: 3,5 cm; Fuß: 2,5 cm; Links: 3,5 cm; Rechts: 2,5 cm
+
+\geometry{verbose,a4paper,tmargin=35mm,bmargin=25mm,lmargin=35mm,rmargin=25mm}
+
+% Package: fancyhdr
+% Anpassung der Kopf- und Fußzeile
+% Default: Kopf (rechts): Aktuelles Kapitel, Kopf (links): Autor, Fuß (rechts): Seitenzahl
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\rhead{Nachname, Vorname}
+\lhead{\leftmark}
+\rfoot{\thepage}
+
+% Einrückungen
+\setlength{\parskip}{0pt}
+\setlength\parindent{20pt}
+
+\onehalfspacing % 1.5 Zeilenabstand
+
+\bibliographystyle{ieeetr} % Quellenverzeichnis nach IEEE Standard
+
+% Beginn des Dokuments
+\begin{document}
+
+\includepdf[pages={1}]{\detokenize{Template_Titelseite.pdf}} % Einbindung der Titelseite
+
+% Erklärung
+
+\section*{Erklärung}
+\label{sec:erklaerung}
+\addcontentsline{toc}{section}{\nameref{sec:erklaerung}}
+
+Hiermit erkläre ich, dass dieser Bericht auf meinen eigenen Leistungen beruht. Insbesondere erkläre ich, dass
+\begin{description}
+	\item [a)] ich diesen Praktikumsbericht selbstständig ohne unzulässige fremde Hilfe erstellt habe,
+	\item [b)] die Verwendung aller Quellen klar und korrekt angegeben habe und aus anderen Quellen entnommene Zitate eindeutig als solche gekennzeichnet habe,
+	\item [c)] ich aus anderen Quellen entnommene Gedanken, Ideen, Bilder, Zeic
+	\item [d)] ich außer den angegebenen Quellen und Hilfsmitteln keine weiteren Quellen und Hilfsmittel zur Erstellung dieses Berichts verwendet habe.
+\end{description}
+
+\begin{verbatim}
+
+
+
+
+\end{verbatim}
+
+\begin{tabular}{lp{2em}l} 
+ \hspace{5cm}   && \hspace{4cm} \\\cline{1-1}\cline{3-3} 
+ Ort, Datum     && Unterschrift 
+\end{tabular}
+
+\newpage
+
+% Falls die wissenschaftliche Arbeit ein Praxisbericht ist
+
+\section*{Sperrvermerk}
+\label{sec:sperrvermerk}
+\addcontentsline{toc}{section}{\nameref{sec:sperrvermerk}}
+
+Dieser Bericht enthält vertrauliche Informationen der Firma $<$Firma$>$. Eine Veröffentlichung oder Vervielfältigung dieses Berichts außerhalb der Verwendung zur Bewertung und Dokumentation der Studienleistungen ohne ausdrückliche Genehmigung der Firma $<$Firma$>$ ist nicht gestattet.
+Dieser Bericht ist nur Personen zugänglich zu machen, die mit der Anerkennung des Praxissemesters oder der Abschlussarbeit befasst sind.
+
+\newpage
+
+% Inhaltsverzeichnis
+
+\tableofcontents
+
+\newpage
+
+% Abkürzungsverzeichnis, alphabetisch geordnet
+
+\section*{Abkürzungsverzeichnis}
+\label{sec:abkuerzungsverzeichnis}
+\addcontentsline{toc}{section}{\nameref{sec:abkuerzungsverzeichnis}}
+
+\begin{table}[!h]
+\begin{tabular}{l l}
+Abk.1 & Abkürzung 1 \\
+Abk.2 & Abkürzung 2 \\
+Abk.3 & Abkürzung 3 \\
+\end{tabular}
+\end{table}
+
+\newpage
+
+% Abbildungsverzeichnis
+
+% NICHT LÖSCHEN. Entfernt eine redundante Überschrift des Abbildungsverzeichnisses und schreibt sie neu.
+\makeatletter
+\renewcommand\listoffigures{%
+        \@starttoc{lof}%
+}
+\makeatother
+
+\section*{Abbildungsverzeichnis}
+\label{sec:abbildungsverzeichnis}
+\addcontentsline{toc}{section}{\nameref{sec:abbildungsverzeichnis}}
+
+\listoffigures
+
+\newpage
+
+% Symbolverzeichnis
+
+\begin{comment}
+\section*{Symbolverzeichnis}
+\label{sec:symbolverzeichnis}
+\addcontentsline{toc}{section}{\nameref{sec:symbolverzeichnis}}
+
+\newpage
+\end{comment}
+
+% Tabellenverzeichnis
+
+% NICHT LÖSCHEN. Entfernt eine redundante Überschrift des Tabellenverzeichnisses und schreibt sie neu.
+
+\begin{comment}
+\makeatletter
+\renewcommand\listoftables{%
+        \@starttoc{lot}%
+}
+\makeatother
+
+\section*{Tabellenverzeichnis}
+\label{sec:tabellenverzeichnis}
+\addcontentsline{toc}{section}{\nameref{sec:tabellenverzeichnis}}
+
+\listoftables
+
+\newpage
+\end{comment}
+
+% Codelistingverzeichnis
+
+\begin{comment}
+\section*{Codelistingverzeichnis}
+\label{sec:codeverzeichnis}
+\addcontentsline{toc}{section}{\nameref{sec:codeverzeichnis}}
+
+\newpage
+\end{comment}
+
+\section{Kapitel A}
+
+\Blindtext
+
+\blindtext
+
+\blindtext
+
+\Blindtext
+
+\newpage
+
+\section{Kapitel B}
+
+\Blindtext
+
+\blindtext
+
+\blindtext
+
+\Blindtext
+
+\newpage
+
+\section{Kapitel C}
+
+\Blindtext
+
+\blindtext
+
+\blindtext
+
+\Blindtext
+
+\newpage
+
+\section{Ein anderes Kapitel}
+
+Die Quellen \cite{bi:book1}, \cite{bi:book2} sind wissenschaftlich fundiert \cite{bi:book3}.
+
+\newpage
+
+\section*{Literaturverzeichnis}
+\label{sec:literaturverzeichnis}
+\addcontentsline{toc}{section}{\nameref{sec:literaturverzeichnis}}
+
+\begingroup
+\renewcommand{\section}[2]{}%
+\bibliography{quellenverzeichnis}
+\endgroup
+
+\end{document}

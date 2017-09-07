@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{bi:book1}
+{Nachname1, Vorname1}, {\em Why LaTeX templates are cool}.
+\newblock HS AlbSig, 2017.
+\newblock Zugriff: 01.01.2017.
+
+\bibitem{bi:book2}
+{Nachname2, Vorname2}, {\em Why .NET was a mistake}.
+\newblock Linux Foundation, 2017.
+\newblock Zugriff: 01.01.2017.
+
+\bibitem{bi:book3}
+{Nachname3, Vorname3}, {\em HTML is no programming language}.
+\newblock HS AlbSig, 2017.
+\newblock Zugriff: 01.01.2017.
+
+\end{thebibliography}
